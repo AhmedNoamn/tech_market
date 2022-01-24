@@ -13,9 +13,7 @@ class _ButtonsUnit extends StatelessWidget {
             style: fieldTextStyle(kBlueClr),
           ),
         ),
-        SizedBox(
-          height: heightSize(context, 25),
-        ),
+        SizedBox(height: 15),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -28,7 +26,7 @@ class _ButtonsUnit extends StatelessWidget {
               child: Text(
                 'Login',
                 style: fieldTextStyle(kYellowClr)
-                    .copyWith(fontWeight: FontWeight.w600),
+                    .copyWith(fontWeight: FontWeight.bold),
               ),
             ),
           ],

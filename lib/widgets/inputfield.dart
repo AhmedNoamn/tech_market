@@ -26,7 +26,7 @@ class CustomInputField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: kPadding1(20, 0),
+      margin: kPadding1(20, 7),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

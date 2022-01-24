@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tech_market/constant.dart';
 import 'package:tech_market/core/routes/routes.dart';
 import 'package:tech_market/core/validator/validator.dart';
+import 'package:tech_market/features/nav_bar/view.dart';
 import 'package:tech_market/features/sign_up/view.dart';
 import 'package:tech_market/widgets/button.dart';
 import 'package:tech_market/widgets/inputfield.dart';
@@ -17,10 +18,10 @@ class LoginView extends StatelessWidget {
     return Scaffold(
       body: Container(
         color: kBlueClr,
-        padding: kPadding1(40, 10),
+        padding: kPadding20,
         child: ListView(
           children: [
-            SizedBox(height: heightSize(context, 20)),
+            SizedBox(height: 60),
             Align(
               alignment: Alignment.center,
               child: Text(
@@ -30,7 +31,7 @@ class LoginView extends StatelessWidget {
             ),
             SizedBox(height: heightSize(context, 8)),
             _FieldsUnit(),
-            SizedBox(height: heightSize(context, 30)),
+            SizedBox(height: 50),
             _ButtonsUnit(),
           ],
         ),

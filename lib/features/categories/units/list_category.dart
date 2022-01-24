@@ -6,7 +6,7 @@ class _ListCategoryUnit extends StatelessWidget {
     return ListView.builder(
       itemCount: categoryItem.length,
       itemBuilder: (context, index) => GestureDetector(
-        onTap: () => MagicRoute.navigateTo(ListItemView()),
+        onTap: () => MagicRoute.navigateTo(CategoryDetailsView()),
         child: Card(
           elevation: 2,
           shadowColor: kDarkBlueClr,

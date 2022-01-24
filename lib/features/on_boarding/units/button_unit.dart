@@ -4,7 +4,6 @@ class _ButtonUnit extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      // mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         CustomButton(
             onTap: () => MagicRoute.navigateAndReplacement(SplashView()),
@@ -13,7 +12,9 @@ class _ButtonUnit extends StatelessWidget {
               style: fieldTextStyle(kBlueClr),
             )),
         CustomTextButton(
-            ontap: () {},
+            ontap: () {
+              MagicRoute.navigateAndPopAll(LoginView());
+            },
             child: Text(
               'Skip for now',
               style: fieldTextStyle(kWhiteClr),

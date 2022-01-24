@@ -12,16 +12,12 @@ class _FieldsUnit extends StatelessWidget {
           validator: Validator.validName,
           inputAction: TextInputAction.next,
         ),
-        SizedBox(height: heightSize(context, 30)),
         CustomInputField(
           titleText: 'Email',
           hint: 'email',
           obscureText: false,
           validator: Validator.validEmail,
           inputAction: TextInputAction.next,
-        ),
-        SizedBox(
-          height: heightSize(context, 30),
         ),
         PasswordField(),
       ],

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:tech_market/constant.dart';
 import 'package:tech_market/core/routes/routes.dart';
+import 'package:tech_market/features/log_in/view.dart';
 import 'package:tech_market/features/splash/view.dart';
 import 'package:tech_market/widgets/button.dart';
 import 'package:tech_market/widgets/text_button.dart';
@@ -23,7 +24,6 @@ class _OnBoardingViewState extends State<OnBoardingView> {
         color: kBlueClr,
         width: double.infinity,
         child: ListView(
-          //mainAxisAlignment: MainAxisAlignment.start,
           children: [
             _TextUnit(),
             _ImageUnit(),

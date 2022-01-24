@@ -16,11 +16,11 @@ class RegisterView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: kPadding1(40, 10),
+        padding: kPadding20,
         color: kBlueClr,
         child: ListView(
           children: [
-            SizedBox(height: heightSize(context, 20)),
+            SizedBox(height: 30),
             Align(
               alignment: Alignment.center,
               child: Text(
@@ -28,9 +28,9 @@ class RegisterView extends StatelessWidget {
                 style: subTitleStyle,
               ),
             ),
-            SizedBox(height: heightSize(context, 8)),
+            SizedBox(height: heightSize(context, 10)),
             _FieldsUnit(),
-            SizedBox(height: heightSize(context, 30)),
+            SizedBox(height: 20),
             _ButtonsUnit(),
           ],
         ),

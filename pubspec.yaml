@@ -72,6 +72,9 @@ flutter:
     - assets/images/monitor.png
     - assets/images/rectangle.png  
     - assets/images/basket.png
+    - assets/images/ghm.png
+    - assets/images/iphone.png
+    - assets/images/homeicon.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

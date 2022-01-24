@@ -12,7 +12,7 @@ class _RowButtonItemUnit extends StatelessWidget {
             iconData: FontAwesomeIcons.listUl,
             itemText: 'Categories'),
         ItemButton(
-            onTap: () {},
+            onTap: () => MagicRoute.navigateTo(FavouritesView()),
             iconData: FontAwesomeIcons.star,
             itemText: 'Favourites'),
       ],
@@ -43,7 +43,6 @@ class ItemButton extends StatelessWidget {
             padding: kPadding15,
             child: Icon(
               iconData,
-              //FontAwesomeIcons.listUl,
               color: kBlueClr,
             ),
           ),
@@ -51,7 +50,6 @@ class ItemButton extends StatelessWidget {
         SizedBox(height: 7),
         Text(
           itemText,
-          //'Categories',
           style: textStyle14,
         ),
       ],

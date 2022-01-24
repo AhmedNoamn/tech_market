@@ -17,44 +17,49 @@ class ProductCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
-      child: Card(
+      child: Container(
+        // height: 170,
+        padding: kPadding20,
         margin: kPadding10,
-        elevation: 2,
-        shadowColor: kDarkBlueClr,
-        shape: RoundedRectangleBorder(
-          borderRadius: circularRadius10,
-        ),
-        child: Container(
-          margin: kPadding20,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              // Row(
-              //     children: [
-              //       Text(
-              //         'new',
-              //         style: textStyle12.copyWith(color: kBlueClr),
-              //       ),
-              //       Spacer(),
-              //       Icon(Icons.cancel_outlined),
-              //     ],
-              //   ),
-              //   SizedBox(height: 10),
-              Image.asset(
-                imageAddress,
-                height: 120,
-              ),
-              SizedBox(height: 10),
-              Text(
-                elementText,
-                style: textStyle16.copyWith(color: kDarkClr),
-              ),
-              Text(
-                priceText,
-                style: textStyle12.copyWith(color: kBlueClr),
-              ),
-            ],
-          ),
+        decoration: BoxDecoration(
+            borderRadius: circularRadius10,
+            color: kWhiteClr,
+            boxShadow: [
+              BoxShadow(
+                blurRadius: 10,
+                spreadRadius: 1,
+                offset: Offset(0, 10),
+                color: kDarkClr.withOpacity(0.5),
+              )
+            ]),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // Row(
+            //     children: [
+            //       Text(
+            //         'new',
+            //         style: textStyle12.copyWith(color: kBlueClr),
+            //       ),
+            //       Spacer(),
+            //       Icon(Icons.cancel_outlined),
+            //     ],
+            //   ),
+            //   SizedBox(height: 10),
+            Image.asset(
+              imageAddress,
+              height: 110,
+            ),
+            SizedBox(height: 15),
+            Text(
+              elementText,
+              style: textStyle16.copyWith(color: kDarkClr),
+            ),
+            Text(
+              priceText,
+              style: textStyle12.copyWith(color: kBlueClr),
+            ),
+          ],
         ),
       ),
     );

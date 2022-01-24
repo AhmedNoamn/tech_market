@@ -4,13 +4,17 @@ class _ShowItemUnit extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: heightSize(context, 1.3),
+      height: heightSize(context, 1),
       child: GridView.builder(
         itemCount: 10,
-        gridDelegate:
-            SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          childAspectRatio: 0.77,
+          crossAxisCount: 2,
+        ),
         itemBuilder: (context, index) => ProductCard(
-            onTap: () {},
+            onTap: () {
+              MagicRoute.navigateTo(ProductCardView());
+            },
             imageAddress: 'assets/images/monitor.png',
             elementText: 'Monitor',
             priceText: 'USD 999'),

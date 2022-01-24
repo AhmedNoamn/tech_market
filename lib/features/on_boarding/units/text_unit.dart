@@ -6,7 +6,7 @@ class _TextUnit extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        SizedBox(height: 100),
+        SizedBox(height: 70),
         Text(
           'LA TECH',
           style: headTitleStyle,

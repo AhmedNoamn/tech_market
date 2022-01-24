@@ -12,23 +12,10 @@ class NextButtonUnit extends StatelessWidget {
         return TextButton(
           onPressed: () => _onNextTap(state),
           child: Text(
-            state.isLastPage ? "Sign in" : "Next",
+            state.isLastPage ? "Register" : "Next",
             style: fieldTextStyle(kWhiteClr),
           ),
         );
-        // InkWell(
-        //   onTap: () => _onNextTap(state),
-        //   child: Container(
-        //     width: 230,
-        //     height: 50,
-        //     col
-        //     alignment: Alignment.center,
-        //     child: Text(
-        //       state.isLastPage ? "Sign in" : "Next",
-        //       style: fieldTextStyle(kWhiteClr),
-        //     ),
-        //   ),
-        // );
       },
     );
   }
@@ -41,7 +28,7 @@ class NextButtonUnit extends StatelessWidget {
         curve: Curves.easeInOutSine,
       );
     } else {
-      MagicRoute.navigateAndReplacement(RegisterView());
+      MagicRoute.navigateAndPopAll(RegisterView());
     }
   }
 }

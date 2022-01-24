@@ -7,14 +7,16 @@ class _ButtonsUnit extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         CustomButton(
-          onTap: () {},
+          onTap: () {
+            MagicRoute.navigateAndPopAll(NavBarView());
+          },
           child: Text(
             'Validate',
             style: fieldTextStyle(kBlueClr),
           ),
         ),
         SizedBox(
-          height: heightSize(context, 25),
+          height: 20,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -28,7 +30,7 @@ class _ButtonsUnit extends StatelessWidget {
               child: Text(
                 'Sign-up',
                 style: fieldTextStyle(kYellowClr)
-                    .copyWith(fontWeight: FontWeight.w600),
+                    .copyWith(fontWeight: FontWeight.bold),
               ),
             ),
           ],

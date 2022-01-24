@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tech_market/constant.dart';
 import 'package:tech_market/core/routes/routes.dart';
-import 'package:tech_market/features/category_items/view.dart';
+import 'package:tech_market/features/category_detail/view.dart';
 
 part 'units/list_category.dart';
 
@@ -13,7 +13,7 @@ class CategoriesView extends StatelessWidget {
         elevation: 0,
       ),
       body: Padding(
-        padding: kPadding1(10, 30),
+        padding: kPadding10,
         child: Column(
           children: [
             Align(

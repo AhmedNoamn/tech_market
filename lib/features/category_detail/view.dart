@@ -3,8 +3,9 @@ import 'package:tech_market/constant.dart';
 import 'package:tech_market/widgets/product_card.dart';
 
 part 'units/element_unit.dart';
+part 'units/page_title.dart';
 
-class ListItemView extends StatelessWidget {
+class CategoryDetailsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,16 +13,10 @@ class ListItemView extends StatelessWidget {
         elevation: 0,
       ),
       body: Padding(
-        padding: kPadding1(10, 30),
+        padding: kPadding1(10, 20),
         child: Column(
           children: [
-            Align(
-              alignment: Alignment.topLeft,
-              child: Text(
-                'LapTops',
-                style: screenTitleStyle(32),
-              ),
-            ),
+            _PageTitle(),
             SizedBox(height: 20),
             Expanded(child: _ElementUnit()),
           ],

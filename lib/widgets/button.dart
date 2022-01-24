@@ -21,7 +21,7 @@ class CustomButton extends StatelessWidget {
       child: Container(
         height: height ?? heightSize(context, 10),
         width: width ?? widthSize(context, 1.2),
-        padding: kPadding1(30, 10),
+        padding: kPadding1(30, 5),
         margin: kPadding10,
         decoration: BoxDecoration(
           borderRadius: circularRadius(6),

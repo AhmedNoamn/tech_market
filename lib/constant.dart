@@ -115,13 +115,15 @@ TextStyle get textStyle16 {
 
 TextStyle get textStyle14 {
   return TextStyle(
-    color: kDarkBlueClr,
+    fontWeight: FontWeight.bold,
+    color: kBlueClr,
     fontSize: 14,
   );
 }
 
 TextStyle get textStyle12 {
   return TextStyle(
+    fontWeight: FontWeight.bold,
     color: kGreyClr,
     fontSize: 12,
   );
