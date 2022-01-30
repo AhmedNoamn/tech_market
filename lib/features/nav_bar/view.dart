@@ -4,7 +4,7 @@ import 'package:tech_market/constant.dart';
 import 'package:tech_market/features/categories/view.dart';
 import 'package:tech_market/features/home/view.dart';
 import 'package:tech_market/features/search/view.dart';
-import 'package:tech_market/features/sign_up/view.dart';
+import 'package:tech_market/features/shopping_cart/view.dart';
 
 class NavBarView extends StatefulWidget {
   @override
@@ -16,14 +16,14 @@ class _NavBarViewState extends State<NavBarView> {
   List<Widget> _pageContent = [
     HomeView(),
     SearchView(),
-    RegisterView(),
+    ShoppingCart(),
     CategoriesView(),
   ];
 
   List<BottomNavigationBarItem> _navBarItem = [
     BottomNavigationBarItem(
         icon: Icon(
-          FontAwesomeIcons.archway,
+          Icons.other_houses_outlined,
         ),
         label: ''),
     BottomNavigationBarItem(
@@ -48,6 +48,8 @@ class _NavBarViewState extends State<NavBarView> {
     return Scaffold(
       body: _pageContent[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
+        elevation: 0,
+        iconSize: 30,
         currentIndex: _currentIndex,
         backgroundColor: kBabyBlueClr,
         selectedItemColor: kBlueClr,

@@ -8,7 +8,6 @@ class _FieldsUnit extends StatelessWidget {
         CustomInputField(
           titleText: 'Email',
           hint: 'email',
-          obscureText: false,
           validator: Validator.validEmail,
           inputAction: TextInputAction.next,
         ),

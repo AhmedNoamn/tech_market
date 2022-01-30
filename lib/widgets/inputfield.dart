@@ -4,41 +4,47 @@ import '../constant.dart';
 
 // ignore: must_be_immutable
 class CustomInputField extends StatelessWidget {
-  CustomInputField({
+  const CustomInputField({
     required this.titleText,
     required this.hint,
-    required this.obscureText,
+    this.obscureText,
     this.trailling,
     this.onSaved,
     this.validator,
     this.fieldColor,
+    this.titleColor,
+    this.hintStyle,
     this.inputAction,
+    this.width,
   });
-  bool obscureText;
+  final bool? obscureText;
   final String titleText;
   final String hint;
   final Widget? trailling;
   final String? Function(String?)? validator;
   final Function(String?)? onSaved;
   final Color? fieldColor;
+  final Color? titleColor;
+  final TextStyle? hintStyle;
   final TextInputAction? inputAction;
-
+  final double? width;
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: kPadding1(20, 7),
+      margin: kPadding1(10, 7),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             titleText,
-            style: fieldTextStyle(kWhiteClr),
+            style: fieldTextStyle(titleColor ?? kWhiteClr),
           ),
           Container(
-            padding: kPadding1(20, 3),
+            width: width ?? double.infinity,
+            padding: kPadding1(20, 0),
             margin: kPadding1(0, 10),
             decoration: BoxDecoration(
-              border: Border.all(color: kWhiteClr),
+              border: Border.all(color: kGreyClr),
               borderRadius: circularRadius10,
               color: fieldColor ?? Colors.transparent,
             ),
@@ -52,10 +58,10 @@ class CustomInputField extends StatelessWidget {
                     validator: validator,
                     style: textStyle16,
                     cursorColor: kGreyClr,
-                    obscureText: obscureText,
+                    obscureText: obscureText ?? false,
                     decoration: InputDecoration(
                       hintText: hint,
-                      hintStyle: textStyle16,
+                      hintStyle: hintStyle ?? textStyle16,
                       focusedBorder: UnderlineInputBorder(
                           borderSide: BorderSide(
                         color: Colors.transparent,

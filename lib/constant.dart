@@ -7,6 +7,7 @@ const Color kYellowClr = Color(0xFFFBDF00);
 const Color kGreyClr = Color(0xFFA7A9BE);
 const Color kDarkClr = Color(0xFF0A1034);
 const Color kBabyBlueClr = Color(0xFFE0ECF8);
+const Color kRedClr = Colors.red;
 
 kPadding1(double horizontal, double vertical) =>
     EdgeInsets.symmetric(horizontal: horizontal, vertical: vertical);
@@ -18,6 +19,15 @@ const kPadding20 = EdgeInsets.symmetric(horizontal: 20, vertical: 20);
 BorderRadius circularRadius15 = BorderRadius.circular(15);
 BorderRadius circularRadius10 = BorderRadius.circular(10);
 BorderRadius circularRadius(double radius) => BorderRadius.circular(radius);
+
+var kDivider = Padding(
+  padding: kPadding20,
+  child: Divider(
+    height: 10,
+    thickness: 2,
+    color: kGreyClr,
+  ),
+);
 
 // convert color to material color
 Map<int, Color> colorMap = {
